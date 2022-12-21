@@ -31,7 +31,7 @@ st.set_page_config(page_title="National Records in Athletics by Country",
                     layout="wide",
                     initial_sidebar_state="expanded")
 
-px.set_mapbox_access_token(open('https://raw.githubusercontent.com/alexandrarosario4/proyectoFinal/main/.mapbox_token').read())
+px.set_mapbox_access_token(open('https://raw.githubusercontent.com/alexandrarosario4/proyectoFinal/main/mapbox_token').read())
 st.title("National Records in Athletics by Country")
 
 with st.sidebar:
