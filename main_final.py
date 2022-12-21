@@ -10,7 +10,7 @@ import plotly.express as px
 import streamlit as st
 import numpy as np
 
-df_og = pd.read_csv(r'C:\Users\alexa\OneDrive\Documentos\CDAT\ProyectoFinal\final.csv', sep=";")
+df_og = pd.read_csv('final.csv', sep=";")
 hombres = df_og.drop(df_og.loc[df_og['Event']=="100 m hurdles"].index)
 mujeres = df_og.drop(df_og.loc[df_og['Event']=="110 m hurdles"].index)
 
