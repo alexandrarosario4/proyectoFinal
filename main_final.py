@@ -6,12 +6,9 @@ Created on Wed Dec 21 02:12:03 2022
 """
 
 import pandas as pd
-import plotly.io as pio
 import plotly.express as px
 import streamlit as st
 import numpy as np
-from datetime import datetime,timedelta
-import plotly.graph_objs as go
 
 df_og = pd.read_csv(r'C:\Users\alexa\OneDrive\Documentos\CDAT\ProyectoFinal\final.csv', sep=";")
 hombres = df_og.drop(df_og.loc[df_og['Event']=="100 m hurdles"].index)
