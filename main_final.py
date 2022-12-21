@@ -10,7 +10,7 @@ import plotly.express as px
 import streamlit as st
 import numpy as np
 
-df_og = pd.read_csv('final.csv', sep=";")
+df_og = pd.read_csv(r'C:\Users\alexa\OneDrive\Documentos\CDAT\ProyectoFinal\olimpics_records.csv', sep=",")
 hombres = df_og.drop(df_og.loc[df_og['Event']=="100 m hurdles"].index)
 mujeres = df_og.drop(df_og.loc[df_og['Event']=="110 m hurdles"].index)
 
@@ -31,7 +31,7 @@ st.set_page_config(page_title="National Records in Athletics by Country",
                     layout="wide",
                     initial_sidebar_state="expanded")
 
-px.set_mapbox_access_token(open(".mapbox_token").read())
+px.set_mapbox_access_token(open(r'C:\Users\alexa\OneDrive\Documentos\CDAT\ProyectoFinal\.mapbox_token').read())
 st.title("National Records in Athletics by Country")
 
 with st.sidebar:
@@ -171,10 +171,11 @@ elif visualizacion == "Treemap":
     st.write('<b>You are currently seeing a Treemap where the best' \
              'performing countries hava a darker color:</b>', unsafe_allow_html=True)
     if size == 'menor':
-        df['Records_3'] = 10**(df['Records'].max() - df['Records'])
+        df['Records_3'] = 1.001**(df['Records'].max() - df['Records'])
         #df['Records_3'] = (df['Records_3'] - df['Records_3'].min())/(df['Records_3'].max() - df['Records_3'].min())       
     else:
-        df['Records_3'] = 10**(df['Records'])
+        df['Records_3'] = 1.001**(df['Records'])
+        
     fig = px.treemap(df, path=[px.Constant(evento), 'Continent', 'Country'], 
                      values='Records_3',
                      color='Records_3',  hover_data=['Athlete'],
