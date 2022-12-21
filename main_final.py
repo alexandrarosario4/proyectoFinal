@@ -31,7 +31,7 @@ st.set_page_config(page_title="National Records in Athletics by Country",
                     layout="wide",
                     initial_sidebar_state="expanded")
 
-px.set_mapbox_access_token("https://raw.githubusercontent.com/alexandrarosario4/proyectoFinal/main/.mapbox_token")
+px.set_mapbox_access_token("pk.eyJ1IjoiYWxleGFuZHJhcm9zYXJpbzQiLCJhIjoiY2tudWNpa2VsMDl3cDJvbzJ1c3F0MW5ieiJ9.2BbHZhKmYmJP8c4RUUwGEw")
 
 # px.set_mapbox_access_token(open('https://raw.githubusercontent.com/alexandrarosario4/proyectoFinal/main/.mapbox_token').read())
 st.title("National Records in Athletics by Country")
